@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
-import {BiArrowFromLeft,BiArrowFromRight} from 'react-icons/bi';
+import {BiArrowFromLeft,BiArrowFromRight,BiCalendar} from 'react-icons/bi';
 import {GrEmoji} from 'react-icons/gr'
 import {GiSadCrab} from 'react-icons/gi'
+import {MdTrackChanges} from 'react-icons/md'
 import { Link } from 'react-router-dom';
 import './styleSelector.css'
 
@@ -24,15 +25,27 @@ const StyleSelector = ({setActiveStyle}) => {
                         </Link>
                     </li>
                     <li className='nav-text'>
-                        <Link to='' onClick={() => {setActiveStyle('emoji'); console.log('emoji')}}> {/*Changing the state as it is rn wont change the page*/}
+                        <Link to='/tracker'> {/*Changing the state as it is rn wont change the page*/}
+                            <MdTrackChanges />
+                            <span> Tracker </span>
+                        </Link>
+                    </li>
+                    <li className='nav-text'>
+                        <Link to='#' onClick={() => {setActiveStyle('emoji'); console.log('emoji')}}> {/*Changing the state as it is rn wont change the page*/}
                             <GrEmoji />
                             <span> Style 1 </span>
                         </Link>
                     </li>
                     <li className='nav-text'>
-                        <Link to='' onClick={() => {setActiveStyle('turtle'); console.log('turtle')}}> {/*Changing the state as it is rn wont change the page*/}
+                        <Link to='#' onClick={() => {setActiveStyle('turtle'); console.log('turtle')}}> {/*Changing the state as it is rn wont change the page*/}
                             <GiSadCrab />
                             <span> Style 2 </span>
+                        </Link>
+                    </li>
+                    <li className='nav-text bottom'>
+                        <Link to='/my-calendar'> {/*Changing the state as it is rn wont change the page*/}
+                            <BiCalendar />
+                            <span> My Calendar </span>
                         </Link>
                     </li>
                 </ul>

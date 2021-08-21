@@ -10,8 +10,6 @@ const Day = ({ activeDate, setActiveDate, totalMood, setTotalMood, store, setSto
     const [saved, setSaved] = useState(false)
     let day = activeDate.dayOfYear()
 
-    
-
     return (
         <>
             <div className='button-center'>
@@ -46,30 +44,28 @@ const Day = ({ activeDate, setActiveDate, totalMood, setTotalMood, store, setSto
             <button 
                 className='button-center'
                 onClick={()=>{
-                    setActiveDate(activeDate.add(1,'day'))
-                    if(totalMood[day] !== undefined){
-                        console.log("here")
-                        setStatus(totalMood[day])
+                    if(totalMood[day+1] !== undefined){
+                        setStatus(totalMood[day+1])
                         setSaved(true)
                     } else{
                         setStatus(0)
-                        setSaved(0)
+                        setSaved(false)
                     }
+                    setActiveDate(activeDate.add(1,'day'))
                 }}
             >Next</button>
 
             <button 
                 className='button-center'
                 onClick={()=>{
-                    setActiveDate(activeDate.subtract(1,'day'))
-                    if(totalMood[day] !== undefined){
-                        console.log("here")
-                        setStatus(totalMood[day])
+                    if(totalMood[day-1] !== undefined){
+                        setStatus(totalMood[day-1])
                         setSaved(true)
                     } else{
                         setStatus(0)
-                        setSaved(0)
+                        setSaved(false)
                     }
+                    setActiveDate(activeDate.subtract(1,'day'))
                 }}
             >Prev</button>
         </>
