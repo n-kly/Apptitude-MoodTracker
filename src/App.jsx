@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import StyleSelector from "./components/StyleSelector";
+import { BrowserRouter as Router } from 'react-router-dom';
+import Title from "./components/main/Title";
+import WeekView from "./components/main/WeekView";
 
 function App() {
+  const [activeStyle,  setActiveStyle] = useState('turtle') // This is the active state, you need to pass it into any components you make 
+  const [everything, setEverything] = useState([[[0,0,0,0,0,0,0]]])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <StyleSelector setActiveStyle = {setActiveStyle} /> {/* The active state wont affect the style bar */}
+      <div>
+        <Title activeStyle={activeStyle}/>
+        <WeekView activeStyle={activeStyle}/>
+      </div>      
+    </Router>
   );
 }
 
