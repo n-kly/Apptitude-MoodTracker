@@ -36,11 +36,6 @@
 }
 
 /* add a rotating border here itll look sick trust just figure out how*/
-.active{ 
-    /* background-color:lightseagreen !important;  */
-    border: solid cyan 2px;
-    transition: border-width 1s;
-}
 
 .happy{
     background-color: yellow !important;
@@ -52,4 +47,17 @@
 
 .sad{
     background-color: red !important;
+}
+
+.button-center{
+    text-align: center;
+	width: 70%;
+    height: 40%;
+	max-width: 100%;
+	padding: 1rem;
+	margin: 5rem;
+}
+
+.saved{
+    border: solid 1px green;
 }
