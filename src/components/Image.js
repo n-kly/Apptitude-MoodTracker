@@ -1,4 +1,5 @@
 import {useEffect, useState} from 'react'
+import './main/main.css'
 
 const Image = () => {
     const [data,setData] = useState()
@@ -7,7 +8,10 @@ const Image = () => {
         setData(Object.entries(JSON.parse(localStorage.getItem('moodCalendar'))))
         console.log(data)
     },[])
-  
+    console.log(data)
+
+    let styles = ['none','happy', 'sad', 'medium'];
+
     return (
         <div>
         d
@@ -16,8 +20,7 @@ const Image = () => {
                     data.map((day)=>{
                         console.log(day);
                         return(
-                            <h1>{day[0]}</h1>
-                        
+                            <h1 className={styles[day[1]]}>{day[0]}</h1>
                         )
                     })
 

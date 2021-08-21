@@ -17,10 +17,9 @@ const Day = ({ activeDate, setActiveDate, totalMood, setTotalMood, store, setSto
             </div>
             <div className="week-box">
                 <div 
-                className={'day active '+statusList[status] + ' '+ (saved?'saved':'')} 
-                onClick={
-                    ()=>{
-                        
+                className={'day '+statusList[status] + ' '+ (saved?'saved':'')} 
+                onClick={()=>
+                    {
                         if(status===(statusList.length-1)){
                             setStatus(0)
                         } else{

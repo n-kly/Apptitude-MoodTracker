@@ -6,7 +6,7 @@ import Image from "./components/Image";
 
 function App() {
   const [activeStyle,  setActiveStyle] = useState('turtle') // This is the active state, you need to pass it into any components you make 
-
+  
   return (
     <Router>
       <StyleSelector setActiveStyle = {setActiveStyle} /> {/* The active state wont affect the style bar */}
