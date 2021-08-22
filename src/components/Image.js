@@ -24,14 +24,14 @@ const Image = () => {
     let styles = ['none','happy', 'sad', 'medium'];
 
     return (
-        <div className="d-flex flex-wrap">
+        <div className="flexboxtest">
         {
             (data!==undefined?
                 data.map((day)=>{
                     console.log(day);
                     // return(<h1 className={styles[day[1]]}>{day[0]}</h1>)
                     return(
-                        <div className="p-2">{day[1]}</div>
+                        <div className="flex-day">{day[1]}</div>
                     )
                 })
 
