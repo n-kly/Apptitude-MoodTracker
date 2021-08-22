@@ -27,12 +27,13 @@ const Day = ({ activeDate, setActiveDate, totalMood, setTotalMood, store, setSto
     
     return (
         <>
-            <div className='date'>
-                {activeDate.format('dddd, MMMM D')}
-            </div>
-            <div className="week-box">
+            <div class="wrapper">
+                <div className='date'>
+                    {activeDate.format('dddd, MMMM D')}
+                </div>
+
                 <div 
-                className={'day '+statusList[status] + ' '+ (saved?'saved':'')} 
+                className={'day '+statusList[status] + (saved?' saved':'') + (status === 0?' defaultDay':'')} 
                 onClick={()=>
                     {
                         if(status===(statusList.length-1)){
@@ -42,50 +43,52 @@ const Day = ({ activeDate, setActiveDate, totalMood, setTotalMood, store, setSto
                         }                  
                     }
                 }
-                ><div className="smiley">{showFace(status)}</div>
+                >
+                    <div className="clue">Press to Change</div>
+                    <div className="smiley">{showFace(status)}</div>
                 </div>
-            </div>
-            <section className="buttons">
-                <button 
-                    className='button-center' 
-                    onClick={()=>{
-                        setTotalMood({...totalMood, [activeDate.dayOfYear()]:status})
-                        setActiveDate(activeDate.add(1,'day'))
-                        setStatus(0)
-                        setSaved(0)
-                        setStore(!store)
-                    }}
-                >Submit mood</button> {/* ive had it with this project, ive spent too long fix this button yourself probably bootstrap it please*/}
                 
-                <button 
-                    className='button-center'
-                    onClick={()=>{
-                        if(totalMood[day+1] !== undefined){
-                            setStatus(totalMood[day+1])
-                            setSaved(true)
-                        } else{
+                <section className="buttons">
+                    <button 
+                        className='button-center' 
+                        onClick={()=>{
+                            setTotalMood({...totalMood, [activeDate.dayOfYear()]:status})
+                            setActiveDate(activeDate.add(1,'day'))
                             setStatus(0)
-                            setSaved(false)
-                        }
-                        setActiveDate(activeDate.add(1,'day'))
-                    }}
-                >Next</button>
+                            setSaved(0)
+                            setStore(!store)
+                        }}
+                    >Submit mood</button> {/* ive had it with this project, ive spent too long fix this button yourself probably bootstrap it please*/}
+                    
+                    <button 
+                        className='button-center'
+                        onClick={()=>{
+                            if(totalMood[day+1] !== undefined){
+                                setStatus(totalMood[day+1])
+                                setSaved(true)
+                            } else{
+                                setStatus(0)
+                                setSaved(false)
+                            }
+                            setActiveDate(activeDate.add(1,'day'))
+                        }}
+                    >Next</button>
 
-                <button 
-                    className='button-center'
-                    onClick={()=>{
-                        if(totalMood[day-1] !== undefined){
-                            setStatus(totalMood[day-1])
-                            setSaved(true)
-                        } else{
-                            setStatus(0)
-                            setSaved(false)
-                        }
-                        setActiveDate(activeDate.subtract(1,'day'))
-                    }}
-                >Prev</button>
-            </section>
-            
+                    <button 
+                        className='button-center'
+                        onClick={()=>{
+                            if(totalMood[day-1] !== undefined){
+                                setStatus(totalMood[day-1])
+                                setSaved(true)
+                            } else{
+                                setStatus(0)
+                                setSaved(false)
+                            }
+                            setActiveDate(activeDate.subtract(1,'day'))
+                        }}
+                    >Prev</button>
+                </section>
+            </div>
         </>
     )
 }
