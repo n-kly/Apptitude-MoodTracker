@@ -61,3 +61,8 @@
 .saved{
     border: solid 5px green;
 }
+
+.smiley {
+    height: 100px;
+    width: 100px;
+}
