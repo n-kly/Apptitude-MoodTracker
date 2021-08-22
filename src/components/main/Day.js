@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import dayjs from 'dayjs'
 import DayOfYear from 'dayjs/plugin/dayOfYear'
+import {BiHappyAlt, BiSad} from 'react-icons/bi'
+import {MdSentimentNeutral} from 'react-icons/md'
 
 dayjs.extend(DayOfYear);
 
@@ -10,6 +12,19 @@ const Day = ({ activeDate, setActiveDate, totalMood, setTotalMood, store, setSto
     const [saved, setSaved] = useState(false)
     let day = activeDate.dayOfYear()
 
+    function showFace(status) {
+        switch (status) {
+            case 1:
+                return(<BiHappyAlt className = "smiley"/>)
+            case 2:
+                return(<MdSentimentNeutral className = "smiley"/>)
+            case 3:
+                return(<BiSad className = "smiley"/>)
+            default:
+                break;
+        }
+    }
+    
     return (
         <>
             <div className='button-center'>
@@ -21,13 +36,13 @@ const Day = ({ activeDate, setActiveDate, totalMood, setTotalMood, store, setSto
                 onClick={()=>
                     {
                         if(status===(statusList.length-1)){
-                            setStatus(0)
+                            setStatus(1)
                         } else{
                             setStatus(status+1)
                         }                  
                     }
                 }
-                >
+                ><div className="smiley">{showFace(status)}</div>
                 </div>
             </div>
             <button 
