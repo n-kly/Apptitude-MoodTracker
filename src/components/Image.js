@@ -31,7 +31,7 @@ const Image = () => {
                 data.map((day)=>{
                     console.log(day);
                     return(
-                        <div className={'flex-day '+styles[day[1]]}>{date}</div>
+                        <div className={'flex-day '+styles[day[1]]}>{day[0]}</div>
                     )
                 })
 
