@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react'
 import { BiTable } from 'react-icons/bi'
 import './main/main.css'
+import dayjs from 'dayjs'
 
 const Image = () => {
     const [data,setData] = useState()
@@ -29,9 +30,8 @@ const Image = () => {
             (data!==undefined?
                 data.map((day)=>{
                     console.log(day);
-                    // return(<h1 className={styles[day[1]]}>{day[0]}</h1>)
                     return(
-                        <div className="flex-day">{day[1]}</div>
+                        <div className={'flex-day '+styles[day[1]]}>{date}</div>
                     )
                 })
 

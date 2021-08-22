@@ -46,22 +46,25 @@ const Day = ({ activeDate, setActiveDate, totalMood, setTotalMood, store, setSto
                 </div>
             </div>
             <section className="buttons">
-                <button 
+                {/* <button 
                     className='button-center' 
                     onClick={()=>{
-                        setTotalMood({...totalMood, [activeDate.dayOfYear()]:status})
+                        setTotalMood({...totalMood, [activeDate.format("DD MMM")]:status})
                         setActiveDate(activeDate.add(1,'day'))
                         setStatus(0)
                         setSaved(0)
                         setStore(!store)
                     }}
-                >Submit mood</button> {/* ive had it with this project, ive spent too long fix this button yourself probably bootstrap it please*/}
+                >Submit mood</button> ive had it with this project, ive spent too long fix this button yourself probably bootstrap it please */}
                 
                 <button 
                     className='button-center'
                     onClick={()=>{
-                        if(totalMood[day+1] !== undefined){
-                            setStatus(totalMood[day+1])
+                        setTotalMood({...totalMood, [activeDate.format("DD MMM")]:status})
+                        setStore(!store)
+
+                        if(totalMood[activeDate.add(1, 'day').format("DD MMM")] !== undefined){
+                            setStatus(totalMood[activeDate.add(1, 'day').format("DD MMM")])
                             setSaved(true)
                         } else{
                             setStatus(0)
@@ -74,8 +77,8 @@ const Day = ({ activeDate, setActiveDate, totalMood, setTotalMood, store, setSto
                 <button 
                     className='button-center'
                     onClick={()=>{
-                        if(totalMood[day-1] !== undefined){
-                            setStatus(totalMood[day-1])
+                        if(totalMood[activeDate.subtract(1, 'day').format("DD MMM")] !== undefined){
+                            setStatus(totalMood[activeDate.subtract(1, 'day').format("DD MMM")])
                             setSaved(true)
                         } else{
                             setStatus(0)
