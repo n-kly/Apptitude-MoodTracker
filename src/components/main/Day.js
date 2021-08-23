@@ -60,22 +60,7 @@ const Day = ({ activeDate, setActiveDate, totalMood, setTotalMood, store, setSto
                     }}
                 >Submit mood</button> ive had it with this project, ive spent too long fix this button yourself probably bootstrap it please */}
                 
-                <button 
-                    className='button-center'
-                    onClick={()=>{
-                        setTotalMood({...totalMood, [activeDate.format("DD MMM")]:status})
-                        setStore(!store)
-
-                        if(totalMood[activeDate.add(1, 'day').format("DD MMM")] !== undefined){
-                            setStatus(totalMood[activeDate.add(1, 'day').format("DD MMM")])
-                            setSaved(true)
-                        } else{
-                            setStatus(0)
-                            setSaved(0)
-                            setStore(!store)
-                        }}}
-                    >Submit mood</button> {/* ive had it with this project, ive spent too long fix this button yourself probably bootstrap it please*/}
-                    
+                
                     <button 
                         className='button-center'
                         onClick={()=>{

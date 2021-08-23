@@ -1,21 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Urbanist:wght@200&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
 }
-
+/* #395480 */
+/* 01729e */
+body {
+    /* min-height: 100vh; */
+    background-color: #7FDBFF;
+}
 .wrapper {
-    min-height: 80vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     text-align: center;
 }
 
 .emoji {
-    color: red !important;
+    color: white !important;
     text-align: center;
+    margin-top: 8%;
+    font-size: 55px;
 }
 
 .turtle{
@@ -41,11 +49,12 @@
 .day{
     padding: 1rem;
     margin: 1% auto;
-    height: 20vh;
-    width: 20vh;
-    border-radius: 10px;
+    height: 28vh;
+    width: 28vh;
+    border-radius: 15%;
     background-color: rgba(153, 0, 255, 0.8);
     box-sizing: border-box;
+    border: 9px solid white;
 } 
 
 .clue {
@@ -67,19 +76,22 @@
 
 /* add a rotating border here itll look sick trust just figure out how*/
 .none{
-    background-color: rgb(153, 0, 255) !important;
+    background-color: #FFFFFF !important;
 }
 
 .happy{
-    background-color: yellow !important;
+    background-color: #91EB6B !important;
+    color: #39a00c;
 }
 
 .medium{
-    background-color: blue !important;
+    background-color: #FFDC00 !important;
+    color:#9c8e34;
 }
 
 .sad{
-    background-color: red !important;
+    background-color: #6597E8 !important;
+    color: #265094;
 }
 
 .button-center{
@@ -89,6 +101,18 @@
 	max-width: 100%;
 	padding: 1rem;
 	margin: 5rem; */
+    border-radius: 0.25em;
+    text-transform: uppercase;
+    font-weight: 600;    
+    text-align: center;
+    background-color: #c7faff;
+    box-shadow: 0 0.4em #58bec7;
+    opacity: 1;
+    text-decoration: none;
+    outline: none;
+    border: white 20px;
+    cursor: pointer;
+    position: relative;
 }
 
 .saved{
@@ -102,10 +126,38 @@
 
 .date {
     text-align: center;
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Urbanist', sans-serif;
+    font-size: 28px;
+    margin-top: 2%;
+    margin-bottom: 1%;
 }
 
 .buttons{
     text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    margin: 25px 12px;
+    width: 11vw;
+    padding: 15px;
+    font-size: 21px;
+    color: #2a6065;
+    font-family: Montserrat;
+}
+
+button:hover {
+    -webkit-box-shadow: 0 0.25em #58bec7;
+            box-shadow: 0 0.25em #58bec7;
+    top: 0.125em;
+  }
+  
+button:active {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    top: 0.375em;
 }
 
 .flexboxtest {
