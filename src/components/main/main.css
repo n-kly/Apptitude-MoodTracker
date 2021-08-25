@@ -76,22 +76,23 @@ body {
 
 /* add a rotating border here itll look sick trust just figure out how*/
 .none{
-    background-color: #FFFFFF !important;
+    background-color: #8b2c7c !important;
+    color: #FFFFFF !important;
 }
 
 .happy{
     background-color: #91EB6B !important;
-    color: #39a00c;
+    color: #FFFFFF !important;
 }
 
 .medium{
     background-color: #FFDC00 !important;
-    color:#9c8e34;
+    color:#FFFFFF !important;
 }
 
 .sad{
     background-color: #6597E8 !important;
-    color: #265094;
+    color: #FFFFFF !important;
 }
 
 .button-center{
