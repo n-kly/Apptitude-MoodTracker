@@ -1,18 +1,18 @@
-import React, {useState} from 'react'
-import {BiArrowFromLeft,BiArrowFromRight,BiCalendar, BiHappyAlt} from 'react-icons/bi';
-import {GrEmoji} from 'react-icons/gr'
-import {GiSadCrab} from 'react-icons/gi'
-import {MdTrackChanges} from 'react-icons/md'
+import React, { useState } from 'react';
+import { BiArrowFromLeft, BiArrowFromRight, BiCalendar } from 'react-icons/bi';
+import { GrEmoji } from 'react-icons/gr';
+import { GiSadCrab } from 'react-icons/gi';
+import { MdTrackChanges } from 'react-icons/md';
 import { Link } from 'react-router-dom';
-import './styleSelector.css'
+import './styleSelector.css';
 
-const StyleSelector = ({setActiveStyle}) => {
-    const [sidebar, setSidebar] = useState(false); // Toggle sidebar visibility
-    const toggleSidebar = () => setSidebar(!sidebar); // Seperate function as bugfix
+const StyleSelector = ({ setActiveStyle }) => {
+    const [sidebar, setSidebar] = useState(false);
+    const toggleSidebar = () => setSidebar(!sidebar); 
 
     return (
-        <> {/*Try center the open and close buttons*/}
-            <div className='navbar'> {/*Fix the open button with css*/}
+        <>
+            <div className='navbar'>
                 <Link to='#' className='menu-bars'>
                     <BiArrowFromLeft onClick={toggleSidebar} />
                 </Link>
@@ -24,26 +24,40 @@ const StyleSelector = ({setActiveStyle}) => {
                             <BiArrowFromRight />
                         </Link>
                     </li>
+
                     <li className='nav-text'>
-                        <Link to='/tracker'> {/*Changing the state as it is rn wont change the page*/}
+                        <Link to='/tracker'>
                             <MdTrackChanges />
                             <span> Tracker </span>
                         </Link>
                     </li>
+
                     <li className='nav-text'>
-                        <Link to='#' onClick={() => {setActiveStyle('emoji'); console.log('emoji')}}> {/*Changing the state as it is rn wont change the page*/}
+                        <Link
+                            to='#'
+                            onClick={() => {
+                                setActiveStyle('emoji');
+                                console.log('emoji');
+                            }}>
                             <GrEmoji />
                             <span> Style 1 </span>
                         </Link>
                     </li>
+
                     <li className='nav-text'>
-                        <Link to='#' onClick={() => {setActiveStyle('turtle'); console.log('turtle')}}> {/*Changing the state as it is rn wont change the page*/}
+                        <Link
+                            to='#'
+                            onClick={() => {
+                                setActiveStyle('turtle');
+                                console.log('turtle');
+                            }}>
                             <GiSadCrab />
                             <span> Style 2 </span>
                         </Link>
                     </li>
+
                     <li className='nav-text bottom'>
-                        <Link to='/my-calendar'> {/*Changing the state as it is rn wont change the page*/}
+                        <Link to='/my-calendar'>
                             <BiCalendar />
                             <span> My Calendar </span>
                         </Link>
@@ -54,6 +68,4 @@ const StyleSelector = ({setActiveStyle}) => {
     );
 };
 
-export default StyleSelector
-
-
+export default StyleSelector;
