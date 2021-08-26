@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Urbanist:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Dancing+Script:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
 
 * {
     margin: 0;
@@ -9,7 +13,7 @@
 }
 
 body {
-    background-color: #84cdca;
+    background-color: #7fdbff;
 }
 .wrapper {
     display: flex;
@@ -18,7 +22,7 @@ body {
 }
 
 .emoji {
-    color: #e6f4f0 !important;
+    color: #ddf5ff !important;
     text-align: center;
     margin-top: 5%;
     font-size: 55px;
@@ -39,15 +43,11 @@ body {
     display: none;
     margin-top: 40%;
     font-size: 1.5rem;
-    color: #ecf7f4;
+    color: #8bb5c5;
 }
 
 .defaultDay:hover .clue {
     display: block;
-}
-.defaultDay:hover {
-    background-color: rgba(153, 0, 255, 1);
-    transition: background-color, 200ms;
 }
 
 .day:hover {
@@ -55,23 +55,23 @@ body {
 }
 
 .none {
-    background-color: #d3e5c8 !important;
-    color: #ffffff !important;
+    background-color: #d4f3ff !important;
+    color: black !important;
 }
 
 .happy {
     background-color: #91eb6b !important;
-    color: #ffffff !important;
+    color: #39a00c !important;
 }
 
 .medium {
     background-color: #ffe060 !important;
-    color: #ffffff !important;
+    color:#9c8e34 !important;
 }
 
 .sad {
     background-color: #6597e8 !important;
-    color: #ffffff !important;
+    color: #265094 !important;
 }
 
 .button-center {
@@ -151,4 +151,13 @@ button:active {
     margin-top: 10px 10px;
     border-radius: 5px;
     color: white;
+}
+
+.calendarTitle {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+    color: #2d7a98;
+    padding: 40px 0 20px;
+    margin-left: 32px;
 }
