@@ -9,7 +9,7 @@
 }
 
 body {
-    background-color: #7fdbff;
+    background-color: #84cdca;
 }
 .wrapper {
     display: flex;
@@ -18,22 +18,17 @@ body {
 }
 
 .emoji {
-    color: white !important;
+    color: #e6f4f0 !important;
     text-align: center;
-    margin-top: 8%;
+    margin-top: 5%;
     font-size: 55px;
-}
-
-.turtle {
-    color: green !important;
-    text-align: center;
 }
 
 .day {
     padding: 1rem;
     margin: 1% auto;
-    height: 28vh;
-    width: 28vh;
+    height: 30vh;
+    width: 30vh;
     border-radius: 15%;
     background-color: rgba(153, 0, 255, 0.8);
     box-sizing: border-box;
@@ -42,7 +37,9 @@ body {
 
 .clue {
     display: none;
-    position: absolute;
+    margin-top: 40%;
+    font-size: 1.5rem;
+    color: #ecf7f4;
 }
 
 .defaultDay:hover .clue {
@@ -58,7 +55,7 @@ body {
 }
 
 .none {
-    background-color: #8b2c7c !important;
+    background-color: #d3e5c8 !important;
     color: #ffffff !important;
 }
 
@@ -68,7 +65,7 @@ body {
 }
 
 .medium {
-    background-color: #ffdc00 !important;
+    background-color: #ffe060 !important;
     color: #ffffff !important;
 }
 
@@ -93,7 +90,7 @@ body {
 }
 
 .saved {
-    border: solid 5px green;
+    border: solid 9px #3d9970;
 }
 
 .smiley {

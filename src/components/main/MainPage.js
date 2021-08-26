@@ -1,9 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
-import Title from './Title';
 import Day from './Day';
 
 const MainPage = ({
-    activeStyle,
     totalMood,
     setTotalMood,
     activeDate,
@@ -21,20 +19,23 @@ const MainPage = ({
         }
         // eslint-disable-next-line
     }, [store]);
-    console.log(activeStyle);
 
     return (
         <div>
             <div>
-                <Title activeStyle={activeStyle} />
-                <Day
-                    activeDate={activeDate}
-                    setActiveDate={setActiveDate}
-                    totalMood={totalMood}
-                    setTotalMood={setTotalMood}
-                    store={store}
-                    setStore={setStore}
-                />
+                <div>
+                    <h1 className='emoji'> Hi, how was your day? </h1>
+                </div>
+                <div className='dead-middle'>
+                    <Day
+                        activeDate={activeDate}
+                        setActiveDate={setActiveDate}
+                        totalMood={totalMood}
+                        setTotalMood={setTotalMood}
+                        store={store}
+                        setStore={setStore}
+                    />
+                </div>
             </div>
         </div>
     );

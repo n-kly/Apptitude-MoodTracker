@@ -37,7 +37,7 @@ const Day = ({
                 <div className='date'>{activeDate.format('dddd, MMMM D')}</div>
 
                 <div
-                    className={'day ' + statusList[status] + (saved ? ' saved' : '') + (status === 0 ? ' defaultDay' : '')}
+                    className={'day ' + statusList[status] + (saved && status !== 0? ' saved' : '') + (status === 0 ? ' defaultDay' : '')}
                     onClick={() => {
                         if (status === statusList.length - 1) {
                             setStatus(1);
@@ -45,7 +45,7 @@ const Day = ({
                             setStatus(status + 1);
                         }
                     }}>
-                    <div className='clue'>Press to Change</div>
+                    <div className='clue'>press to change</div>
                     <div className='smiley'>{showFace(status)}</div>
                 </div>
             </div>

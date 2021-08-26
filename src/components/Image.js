@@ -6,8 +6,8 @@ import './reactStyles.css';
 import { BiHappyAlt, BiSad } from 'react-icons/bi';
 import { MdSentimentNeutral } from 'react-icons/md';
 
-const Image = ({ totalMood, activeStyle }) => {
-    let styles = ['none', 'happy', 'sad', 'medium'];
+const Image = ({ totalMood }) => {
+    let styles = ['none', 'happy', 'medium', 'sad'];
     let icons = [0, <BiHappyAlt />, <MdSentimentNeutral />, <BiSad />];
 
     const [value, onChange] = useState(new Date());
@@ -41,6 +41,7 @@ const Image = ({ totalMood, activeStyle }) => {
                             return icons[totalMood[calenDay]];
                         }
                     }}
+                    showNeighboringMonth={false}
                 />
             </div>
         </>
