@@ -56,18 +56,6 @@ const Image = ({totalMood, activeStyle}) => {
     return (
         <>
         <div className="flexboxtest">
-        {/* {
-            (data!==undefined?
-                data.map((day)=>{
-                    console.log(day);
-                    return(
-                        <div className={'flex-day '+styles[day[1]]}>{day[0]}</div>
-                    )
-                })
-
-                :
-                    "Loading")
-            } */}
          <Calendar 
                 onChange={onChange}
                 value={value}
@@ -77,7 +65,7 @@ const Image = ({totalMood, activeStyle}) => {
 
                 tileDisabled={({date, view})=>{
                     return true;
-                }} 
+                }}
 
                 tileClassName={({date, view})=> {
                     let calenDay = dayjs(date).format("DD MMM")
