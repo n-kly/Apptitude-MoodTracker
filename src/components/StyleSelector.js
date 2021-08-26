@@ -1,52 +1,48 @@
-import React, {useState} from 'react'
-import {BiArrowFromLeft,BiArrowFromRight,BiCalendar, BiHappyAlt} from 'react-icons/bi';
-import {GrEmoji} from 'react-icons/gr'
-import {GiSadCrab} from 'react-icons/gi'
-import {MdTrackChanges} from 'react-icons/md'
+import React, { useState } from 'react';
+import { AiOutlineInfoCircle } from 'react-icons/ai';
+import { BiArrowFromLeft, BiArrowFromRight, BiCalendar } from 'react-icons/bi';
+import { MdTrackChanges } from 'react-icons/md';
 import { Link } from 'react-router-dom';
-import './styleSelector.css'
+import './styleSelector.css';
 
-const StyleSelector = ({setActiveStyle}) => {
-    const [sidebar, setSidebar] = useState(false); // Toggle sidebar visibility
-    const toggleSidebar = () => setSidebar(!sidebar); // Seperate function as bugfix
+const StyleSelector = () => {
+    const [sidebar, setSidebar] = useState(false);
+    const toggleSidebar = () => setSidebar(!sidebar); 
 
     return (
-        <> {/*Try center the open and close buttons*/}
-            <div className='navbar'> {/*Fix the open button with css*/}
-                <Link to='#' className='menu-bars'>
-                    <BiArrowFromLeft onClick={toggleSidebar} />
+        <>
+            <div className='navbar'>
+                <Link to='#' className='menu-bars-open'>
+                    <BiArrowFromLeft className={'toggle-icon'} onClick={toggleSidebar} />
                 </Link>
             </div>
             <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
                 <ul className='nav-menu-items' onClick={toggleSidebar}>
                     <li className='navbar-toggle'>
-                        <Link to='#' className='menu-bars'>
-                            <BiArrowFromRight />
+                        <Link to='#' className='menu-bars-close'>
+                            <BiArrowFromRight className={'toggle-icon'}/>
                         </Link>
                     </li>
+
                     <li className='nav-text'>
-                        <Link to='/tracker'> {/*Changing the state as it is rn wont change the page*/}
-                            <MdTrackChanges />
-                            <span> Tracker </span>
+                        <Link to='/tracker'>
+                            <MdTrackChanges className="icon-text"/>
+                            <span className="actual-text"> Tracker </span>
                         </Link>
                     </li>
+
                     <li className='nav-text'>
-                        <Link to='#' onClick={() => {setActiveStyle('emoji'); console.log('emoji')}}> {/*Changing the state as it is rn wont change the page*/}
-                            <GrEmoji />
-                            <span> Style 1 </span>
+                        <Link to='/my-calendar'>
+                            <BiCalendar className="icon-text"/>
+                            <span className="actual-text"> My Calendar </span>
                         </Link>
                     </li>
-                    <li className='nav-text'>
-                        <Link to='#' onClick={() => {setActiveStyle('turtle'); console.log('turtle')}}> {/*Changing the state as it is rn wont change the page*/}
-                            <GiSadCrab />
-                            <span> Style 2 </span>
-                        </Link>
-                    </li>
+
                     <li className='nav-text bottom'>
-                        <Link to='/my-calendar'> {/*Changing the state as it is rn wont change the page*/}
-                            <BiCalendar />
-                            <span> My Calendar </span>
-                        </Link>
+                        <a href='http://mari-lau.wixsite.com/my-site'>
+                            <AiOutlineInfoCircle className="icon-text"/>
+                            <span className="actual-text"> About us </span>
+                        </a>
                     </li>
                 </ul>
             </nav>
@@ -54,6 +50,4 @@ const StyleSelector = ({setActiveStyle}) => {
     );
 };
 
-export default StyleSelector
-
-
+export default StyleSelector;
