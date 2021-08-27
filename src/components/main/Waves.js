@@ -1,5 +1,4 @@
 import React from 'react'
-import {useSpring, useDrag, animated} from 'react-spring'
 import { motion } from "framer-motion"
 import { infinity } from 'check-types'
 
@@ -16,6 +15,9 @@ const Waves = () => {
       yoyo: infinity
     }
   }
+
+  let quoteList = ['Write it on your heart that every day is the best day in the year.', 'I get up every morning and it’s going to be a great day. You never know when it’s going to be over, so I refuse to have a bad day.', 'Today’s goals: Coffee and kindness. Maybe two coffees, and then kindness.', 'An early-morning walk is a blessing for the whole day.', 'I wake up every morning at nine and grab for the morning paper. Then I look at the obituary page. If my name is not on it, I get up.', 'Every morning, I wake up saying, ‘I’m still alive, a miracle.’ And so I keep on pushing.', 'If you’re changing the world, you’re working on important things. You’re excited to get up in the morning.', 'When you arise in the morning, think of what a precious privilege it is to be alive, to breathe, to think, to enjoy, to love.', 'Smile in the mirror. Do that every morning and you’ll start to see a big difference in your life.', 'Some people dream of success, while other people get up every morning and make it happen.'];
+  let authorList = ['Ralph Waldo Emerson', 'Paul Henderson', 'Nanea Hoffman', 'Henry David Thoreau', 'Benjamin Franklin', 'Jim Carrey', 'Larry Page', 'Marcus Aurelius', 'Yoko Ono', 'Wayne Huizenga']
 
   return (
       <div>
