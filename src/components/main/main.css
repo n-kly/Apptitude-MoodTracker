@@ -175,6 +175,7 @@ button{
 .waves {
     position:absolute;
     z-index: 2;
+    width: 100vw;
 }
 
 .full{
@@ -201,3 +202,57 @@ button{
 html { 
     scroll-behavior: smooth; 
 } 
+
+.initial-button {
+    text-decoration: none;
+    border: 2px solid #010100;
+    padding: 15px;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: #FFF;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    border-radius: 2rem;
+    z-index: 2;
+}
+
+.quotes{
+    text-decoration: none;
+    padding: 1rem;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: #FFF;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.quotes-1{
+    text-decoration: none;
+    padding: 1rem;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: #FFF;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+}
