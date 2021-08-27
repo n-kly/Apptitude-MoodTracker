@@ -13,7 +13,7 @@
 }
 
 body {
-    background-color: #7fdbff;
+    background-color: #76D8F5;
 }
 .wrapper {
     display: flex;
@@ -22,7 +22,7 @@ body {
 }
 
 .emoji {
-    color: #ddf5ff !important;
+    color: #EBFBFF !important;
     text-align: center;
     margin-top: 5%;
     font-size: 55px;
@@ -113,7 +113,7 @@ body {
     justify-content: center;
 }
 
-button {
+button{
     margin: 25px 12px;
     width: 11vw;
     padding: 15px;
@@ -122,13 +122,22 @@ button {
     font-family: Montserrat;
 }
 
-button:hover {
+.button-center {
+    margin: 25px 12px;
+    width: 11vw;
+    padding: 15px;
+    font-size: 21px;
+    color: #2a6065;
+    font-family: Montserrat;
+}
+
+.button-center:hover {
     -webkit-box-shadow: 0 0.25em #58bec7;
     box-shadow: 0 0.25em #58bec7;
     top: 0.125em;
 }
 
-button:active {
+.button-center:active {
     -webkit-box-shadow: none;
     box-shadow: none;
     top: 0.375em;
@@ -157,7 +166,8 @@ button:active {
     text-align: center;
     font-family: 'Dancing Script', cursive;
     font-size: 50px;
-    color: #2d7a98;
+    color: #036484;
     padding: 40px 0 20px;
     margin-left: 32px;
+    margin-top:5%;
 }

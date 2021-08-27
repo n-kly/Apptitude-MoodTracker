@@ -3,12 +3,9 @@ import './main/main.css';
 import dayjs from 'dayjs';
 import Calendar from 'react-calendar';
 import './reactStyles.css';
-import { BiHappyAlt, BiSad } from 'react-icons/bi';
-import { MdSentimentNeutral } from 'react-icons/md';
 
 const Image = ({ totalMood }) => {
     let styles = ['none', 'happy', 'medium', 'sad'];
-    let icons = ["", <BiHappyAlt />, <MdSentimentNeutral />, <BiSad />];
 
     const [value, onChange] = useState(new Date());
 
@@ -35,13 +32,6 @@ const Image = ({ totalMood }) => {
                             return styles[0];
                         }
                     }}
-                    // tileContent={({ date, view }) => {
-                    //     let calenDay = dayjs(date).format('DD MMM');
-                    //     if (totalMood[calenDay] !== undefined) {
-                    //         console.log(totalMood[calenDay]);
-                    //         return icons[totalMood[calenDay]];
-                    //     }
-                    // }}
                     showNeighboringMonth={false}
                 />
             </div>
