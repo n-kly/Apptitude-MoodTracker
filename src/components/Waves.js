@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { animate, motion } from "framer-motion"
+import { Link } from 'react-router-dom';
 
 const Waves = () => {
   const randex = Math.floor(Math.random() * (2 - 0 + 1) + 0);
@@ -20,6 +21,7 @@ const Waves = () => {
 
 
   return (
+    <div className="wave-background">
       <div className="waves">
         <svg
           id="visual"
@@ -57,8 +59,10 @@ const Waves = () => {
         </svg>
         <p className="quotes">{quoteList[randex]}</p>
         <p className="quotes-1">{authorList[randex]}</p>
-        <a href="#dead-middle" className="initial-button">CLICK ME</a>
+        <Link to="/tracker" className="initial-button">CLICK ME</Link>
       </div>
+    </div>
+      
   )
 }
 

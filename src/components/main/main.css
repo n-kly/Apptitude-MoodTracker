@@ -181,15 +181,18 @@ button{
 .full{
     position: relative;
     overflow-x: hidden;
-    /* overflow-y: hidden; */
+    overflow-y: hidden;
     height: 100vh;
     width: 100vw;
 }
 
 .wave-background{
     background-color: #001221;
-    height: 105vh;
+    height: 100vh;
     width: 100vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    z-index: 100;
 }
 
 .dead-middle{

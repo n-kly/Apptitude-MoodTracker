@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import Day from "./Day";
-import Waves from './Waves.js'
+import Waves from '../Waves.js'
 
 const MainPage = ({ totalMood, setTotalMood, activeDate, setActiveDate }) => {
   const [store, setStore] = useState(false);
@@ -30,9 +30,6 @@ const MainPage = ({ totalMood, setTotalMood, activeDate, setActiveDate }) => {
             store={store}
             setStore={setStore}
           />
-        </div>
-        <div className="wave-background">
-          <Waves />
         </div>
       </div>
   );
