@@ -36,10 +36,14 @@ const MainPage = ({ totalMood, setTotalMood, activeDate, setActiveDate }) => {
             setStore={setStore}
           />
         </div>
-        <p className="quotes">{quoteList[randex]}</p>
-        <p className="quotes">{authorList[randex]}</p>
-        {console.log(randex)}
+        <div className="footer">
+          <div className="quotes">
+            <p className="quote">"{quoteList[randex]}"</p>
+            <p className="quote author">- {authorList[randex]}</p>
+          </div>
+        </div>
       </div>
+        
   );
 };
 

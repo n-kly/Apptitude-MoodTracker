@@ -26,8 +26,8 @@ const Waves = () => {
         <svg
           id="visual"
           viewBox="0 0 960 540"
-          width="1960"
-          height="1080"
+          width="100vw"
+          height="100vh"
         >
 
           <motion.path animate={{x: -100}} transition={{duration: 8, yoyo: Infinity}}

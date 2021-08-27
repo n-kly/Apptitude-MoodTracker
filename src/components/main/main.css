@@ -169,7 +169,7 @@ button{
     color: #036484;
     padding: 40px 0 20px;
     margin-left: 32px;
-    margin-top:5%;
+    margin-top: 1%;
 }
 
 .waves {
@@ -197,8 +197,8 @@ button{
 
 .dead-middle{
     margin-bottom: auto;
-    height: 100vh;
-    width: 100vw;
+    /* height: 100vh; */
+    /* width: 100vw; */
     padding-top: 5%;
 }
 
@@ -226,36 +226,43 @@ html {
     z-index: 2;
 }
 
-.quotes{
-    text-decoration: none;
-    padding: 1rem;
-    color: #000;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    position: relative;
-    display: inline-block;
+.footer {
+    display: flex;
+    height: 30%;
     justify-content: center;
-    align-items: center;
-    position: absolute;
-    background-color: #FFF;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    align-items: flex-start;
+    margin-top: 3vh;
 }
 
-.quotes-1{
-    text-decoration: none;
-    padding: 1rem;
-    color: #000;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+.quotes {
+    height: fit-content;
+    max-width: 50vw;
+    padding: 9px;
+}
+
+.quote{
+    /* padding: 1rem;
     position: relative;
     display: inline-block;
-    justify-content: center;
+    justify-content: center; */
     align-items: center;
-    position: absolute;
-    background-color: #FFF;
-    top: 60%;
+    /* position: absolute; */
+    text-align: center;
+    /* top: 85%;
     left: 50%;
-    transform: translate(-50%, -60%);
+    transform: translate(-50%, -50%); */
+    color: #036484;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.3px;
+    font-size: 16px;
+    background: #c3f1ff;
+    padding: 13px;
+}
+
+.author {
+    /* top: 90%; */
+    font-family: "Dancing Script";
+    font-size: 20px;
+    margin-top: 5px;
+    background: none;
 }
