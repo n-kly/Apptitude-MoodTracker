@@ -1,6 +1,6 @@
 # Apptitude-MoodTracker
 
-## Link: https://mood-meter1.herokuapp.com/tracker
+## Live Link: https://mood-meter1.herokuapp.com/tracker
 
 ## Installation
 ### 1. Clone the github repo
@@ -21,4 +21,6 @@ framer-motion | Creating an dynamic style on the homepage
 
 ### 4. Run the server
   #### - run ```npm start``` to start the server
+  
+### 5. More Info: https://mari-lau.wixsite.com/my-site/coming-soon-01
 
