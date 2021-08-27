@@ -1,10 +1,11 @@
 # Apptitude-MoodTracker
 
-## Link: 
+## Link: https://mood-meter1.herokuapp.com/tracker
 
 ## Installation
 ### 1. Clone the github repo
-
+  #### - Make sure you have GitHub desktop and GitBash installed
+  
 ### 2. Install node.js https://nodejs.org/en/
 
 ### 3. Install the dependencies
