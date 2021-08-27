@@ -15,6 +15,7 @@ const Day = ({
     setStore,
 }) => {
     let statusList = ['none', 'happy', 'medium', 'sad'];
+    
     const [status, setStatus] = useState(0);
     const [saved, setSaved] = useState(false);
 
