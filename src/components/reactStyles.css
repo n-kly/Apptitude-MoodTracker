@@ -35,7 +35,7 @@
 }
 .react-calendar__navigation {
     height: 44px;
-    margin-bottom: 1em;
+    margin-bottom: 3rem;
 }
 .react-calendar__navigation button {
     min-width: 44px;
@@ -131,4 +131,11 @@
 abbr {
     text-decoration: none;
     font-family: "Montserrat";
+}
+.react-calendar__navigation__label{
+    line-height: 1.5;    
+}
+
+.react-calendar__navigation__label__labelText{
+    margin-left: 0px !important;
 }

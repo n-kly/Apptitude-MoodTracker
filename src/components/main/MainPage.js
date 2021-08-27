@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 import Day from "./Day";
-import anime from 'animejs'
 
 const MainPage = ({ totalMood, setTotalMood, activeDate, setActiveDate }) => {
   const [store, setStore] = useState(false);
@@ -20,7 +19,7 @@ const MainPage = ({ totalMood, setTotalMood, activeDate, setActiveDate }) => {
     <div>
       <div>
         <div>
-          <svg
+          {/* <svg
             id="visual"
             viewBox="0 0 960 540"
             width="960"
@@ -58,7 +57,7 @@ const MainPage = ({ totalMood, setTotalMood, activeDate, setActiveDate }) => {
               {value = }
             ]
           }) */}
-        </div>
+        </div> 
         <div>
           <h1 className="emoji"> Hi, how was your day? </h1>
         </div>
