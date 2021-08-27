@@ -1,7 +1,5 @@
 import React from 'react'
-import {useSpring, useDrag, animated} from 'react-spring'
 import { animate, motion } from "framer-motion"
-import { infinity } from 'check-types'
 
 const Waves = () => {
   return (
@@ -11,11 +9,7 @@ const Waves = () => {
           viewBox="0 0 960 540"
           width="1960"
           height="1080"
-          // xmlns="http://www.w3.org/2000/svg"
-          // xmlns:xlink="http://www.w3.org/1999/xlink"
-          // version="1.1"
         >
-          <rect x="0" y="0" width="960" height="540" fill="#001221"></rect>
 
           <motion.path animate={{x: -100}} transition={{duration: 8, yoyo: Infinity}}
             d="M0 206L11.5 199.2C23 192.3 46 178.7 68.8 183.2C91.7 187.7 114.3 210.3 137.2 215.7C160 221 183 209 205.8 205.3C228.7 201.7 251.3 206.3 274.2 202C297 197.7 320 184.3 342.8 180.8C365.7 177.3 388.3 183.7 411.2 184.2C434 184.7 457 179.3 480 179.5C503 179.7 526 185.3 548.8 192.3C571.7 199.3 594.3 207.7 617.2 214.7C640 221.7 663 227.3 685.8 223.7C708.7 220 731.3 207 754.2 204.8C777 202.7 800 211.3 822.8 208.8C845.7 206.3 868.3 192.7 891.2 187.7C914 182.7 937 186.3 948.5 188.2L960 190L960 0L948.5 0C937 0 914 0 891.2 0C868.3 0 845.7 0 822.8 0C800 0 777 0 754.2 0C731.3 0 708.7 0 685.8 0C663 0 640 0 617.2 0C594.3 0 571.7 0 548.8 0C526 0 503 0 480 0C457 0 434 0 411.2 0C388.3 0 365.7 0 342.8 0C320 0 297 0 274.2 0C251.3 0 228.7 0 205.8 0C183 0 160 0 137.2 0C114.3 0 91.7 0 68.8 0C46 0 23 0 11.5 0L0 0Z"
@@ -40,6 +34,7 @@ const Waves = () => {
             fill="#7fdbff"
           ></motion.path>
         </svg>
+        <a href="#dead-middle">dwadwasd</a>
       </div>
   )
 }

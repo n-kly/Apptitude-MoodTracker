@@ -17,15 +17,11 @@ const MainPage = ({ totalMood, setTotalMood, activeDate, setActiveDate }) => {
   }, [store]);
 
   return (
-    <div>
-      <div>
-      <div>
-        <Waves />
-      </div>
-        <div>
-          <h1 className="emoji"> Hi, how was your day? </h1>
-        </div>
-        <div className="dead-middle">
+      <div className="full" id="full">        
+        <div className="dead-middle" id="dead-middle">
+          <div>
+            <h1 className="emoji"> Hi, how was your day? </h1>
+          </div>
           <Day
             activeDate={activeDate}
             setActiveDate={setActiveDate}
@@ -35,8 +31,10 @@ const MainPage = ({ totalMood, setTotalMood, activeDate, setActiveDate }) => {
             setStore={setStore}
           />
         </div>
+        <div className="wave-background">
+          <Waves />
+        </div>
       </div>
-    </div>
   );
 };
 

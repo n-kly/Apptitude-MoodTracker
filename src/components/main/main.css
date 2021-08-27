@@ -24,7 +24,7 @@ body {
 .emoji {
     color: #EBFBFF !important;
     text-align: center;
-    margin-top: 5%;
+    
     font-size: 55px;
 }
 
@@ -171,3 +171,33 @@ button{
     margin-left: 32px;
     margin-top:5%;
 }
+
+.waves {
+    position:absolute;
+    z-index: 2;
+}
+
+.full{
+    position: relative;
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+    height: 100vh;
+    width: 100vw;
+}
+
+.wave-background{
+    background-color: #001221;
+    height: 105vh;
+    width: 100vw;
+}
+
+.dead-middle{
+    margin-bottom: auto;
+    height: 100vh;
+    width: 100vw;
+    padding-top: 5%;
+}
+
+html { 
+    scroll-behavior: smooth; 
+} 
